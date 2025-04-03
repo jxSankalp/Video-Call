@@ -22,6 +22,7 @@ import {
 import Loader from "./Loader";
 import EndCallButton from "./EndCallButton";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type CallLayoutType = "grid" | "speaker-left" | "speaker-right";
 
@@ -101,7 +102,7 @@ const MeetingRoom = () => {
           toast.success("Meeting link copied to clipboard")
         }}>
           <div className=" cursor-pointer rounded-2xl bg-[#19232d] px-4 py-2 hover:bg-[#4c535b]  ">
-            <img src="/icons/copy.svg"/>
+            <Image src="/icons/copy.svg" alt= ""/>
           </div>
         </button>
         {!isPersonalRoom && <EndCallButton />}
